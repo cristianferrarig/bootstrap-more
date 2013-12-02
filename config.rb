@@ -61,6 +61,13 @@ set :fonts_dir,  'assets/fonts'
 activate :directory_indexes
 activate :livereload
 
+
+# Development-specific configuration
+configure :development do
+  set :debug_assets, true
+end
+
+
 # Build-specific configuration
 configure :build do
   # ignore 'images/*.psd'
