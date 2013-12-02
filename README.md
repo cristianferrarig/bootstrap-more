@@ -1,5 +1,8 @@
 The flavors are not documented yet :S
+
 Sorry about that.
+
+------
 
 To get started, check out <http://cristianferrarig.github.io/bootstrap-more>!
 
@@ -16,11 +19,11 @@ To get started, check out <http://cristianferrarig.github.io/bootstrap-more>!
 
 * Clone and init working directory
 
-    $ git clone git@github.com:cristianferrarig/bootstrap-more.git
-    $ cd bootstrap-more
+        $ git clone git@github.com:cristianferrarig/bootstrap-more.git
+        $ cd bootstrap-more
 
 * Install middleman gem:
 
-    $ gem install middleman
-    $ bundle install
-    $ bundle exec middleman server
+        $ gem install middleman
+        $ bundle install
+        $ bundle exec middleman server
