@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <%= partial 'includes/header' %>
+  </head>
+  <body class="bs-docs-home">
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <%= partial 'includes/nav-main' %>
+
+    <!-- Page content of course! -->
+    <%= yield %>
+
+    <!-- JS and analytics only. -->
+    <%= partial 'includes/footer' %>
+
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <%= render :partial => 'includes/header' %>
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <%= render :partial => 'includes/nav-main' %>
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.lead }}</p>
+        <%= render :partial => 'includes/ads' %>
+      </div>
+    </div>
+
+    <!-- Callout for the old docs link -->
+    <%= render :partial => 'includes/old-bs-docs' %>
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+
+              <% if current_page.data.slug == "getting-started" %>
+                <%= render :partial => 'includes/ads' %>
+                <%= render :partial => 'includes/nav-getting-started' %>
+              <% elsif current_page.data.slug == "css" %>
+                <%= render :partial => 'includes/nav-css' %>
+              <% elsif current_page.data.slug == "components" %>
+                <% render :partial => 'includes/nav-components' %>
+              <% elsif current_page.data.slug == "js" %>
+                <%= render :partial => 'includes/nav-javascript' %>
+              <% elsif current_page.data.slug == "customize" %>
+                <%= render :partial => 'includes/nav-customize' %>
+              <% elsif current_page.data.slug == "about" %>
+                <%= render :partial => 'includes/nav-about' %>
+              <% endif %>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+          <%= yield %>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        <%= render :partial => 'includes/social-buttons' %>
+
+        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li>Currently v{{ site.current_version }}</li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ page.base_url }}2.3.2/">Bootstrap 2.3.2 docs</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.blog }}">Blog</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    <%= render :partial => 'includes/footer' %>
+
+  </body>
+</html>
