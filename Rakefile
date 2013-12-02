@@ -1,6 +1,6 @@
 require 'middleman-gh-pages'
 
-desc 'publish the template on the web'
+desc 'publish bootstrap sass more on the web'
 task :deploy => [:not_dirty, :prepare_git_remote_in_build_dir, :sync, :build] do
   message = nil
 
