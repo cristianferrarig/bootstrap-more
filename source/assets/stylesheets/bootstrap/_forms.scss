@@ -126,13 +126,17 @@ output {
   vertical-align: middle;
   background-color: $input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  @if $input-border-width != false {
-    border: $input-border-width solid $input-border;
-  }@else {
-    border: none;
+
+  @include validate-enabled-border-width($input-border-width) {
+    border: $input-border-width $input-border-style $input-border-color;
   }
-  @if $border-radius-base != false { border-radius: $input-border-radius; }
-  @if $input-box-shadow != false { @include box-shadow($input-box-shadow); }
+  @include validate-enabled-border-radius($input-border-radius) {
+    border-radius: $input-border-radius;
+  }
+  @include validate-enabled-box-shadow($input-box-shadow) {
+    @include box-shadow($input-box-shadow);
+  }
+
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
 
   // Customize the `:focus` state to imitate native WebKit styles.

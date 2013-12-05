@@ -21,15 +21,22 @@
   // Place the border on the list items and negative margin up for better styling
   margin-bottom: -1px;
   background-color: $list-group-bg;
-  border: 1px solid $list-group-border;
 
-  // Round the first and last items
-  &:first-child {
-    @include border-top-radius($list-group-border-radius);
+  @include validate-enabled-border-width($list-group-border-width) {
+    border: $list-group-border-width $list-group-border-style $list-group-border-color;
+  }
+
+  @include validate-enabled-border-radius($list-group-border-radius) {
+    // Round the first and last items
+    &:first-child {
+      @include border-top-radius($list-group-border-radius);
+    }
+    &:last-child {
+      @include border-bottom-radius($list-group-border-radius);
+    }
   }
   &:last-child {
     margin-bottom: 0;
-    @include border-bottom-radius($list-group-border-radius);
   }
 
   // Align badges within list items

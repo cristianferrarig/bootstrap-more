@@ -42,10 +42,21 @@
   list-style: none;
   font-size: $font-size-base;
   background-color: $dropdown-bg;
-  border: 1px solid $dropdown-fallback-border; // IE8 fallback
-  border: 1px solid $dropdown-border;
-  border-radius: $border-radius-base;
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+
+  @if $enable-border-width != false { @if $dropdown-border-width != false {
+    border: $dropdown-border-width $dropdown-border-style $dropdown-border-color-fallback; // IE8 fallback
+    border: $dropdown-border-width $dropdown-border-style $dropdown-border-color;
+  } @else { border: none; }
+  } @else { border: none; }
+
+  @if $enable-border-radius != false { @if $dropdown-border-radius != false {
+    border-radius: $dropdown-border-radius;
+  } }
+
+  @if $enable-box-shadow != false { @if $dropdown-box-shadow != false {
+    @include box-shadow($dropdown-box-shadow);
+  } }
+
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right

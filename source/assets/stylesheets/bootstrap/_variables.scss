@@ -8,6 +8,12 @@
 
 $border-function-factor: 5% !default; // Added
 
+$enable-border-width:    true !default; // Added
+$enable-border-radius:   true !default; // Added
+
+$enable-box-shadow:      true !default; // Added - This variable not will affect to dropdown shadow
+
+
 // Grays
 // -------------------------
 
@@ -94,6 +100,8 @@ $border-radius-large:            6px !default;
 $border-radius-small:            3px !default;
 
 $border-width-base:              1px !default;
+$border-style-base:              solid !default;
+$border-color-base:              darken($body-bg,10%) !default;
 
 $component-active-color:         #fff !default;
 $component-active-bg:            $brand-primary !default;
@@ -121,7 +129,7 @@ $table-border-color:                 #ddd !default; // table and cell border
 $btn-font-weight:                normal !default;
 $btn-text-transform:             false !default; // Added
 $btn-border-width:               $border-width-base !default; // Added
-$btn-border-style:               solid !default; // Added
+$btn-border-style:               $border-style-base !default; // Added
 $btn-border-radius:              true !default; // Added
 
 $btn-default-color:              #333 !default;
@@ -154,36 +162,44 @@ $btn-link-disabled-color:        $gray-light !default;
 // Forms
 // -------------------------
 
-$input-bg:                       #fff !default;
-$input-bg-disabled:              $gray-lighter !default;
+$input-bg:                        #fff !default;
+$input-bg-disabled:               $gray-lighter !default;
 
-$input-color:                    $gray !default;
-$input-border:                   #ccc !default;
-$input-border-width:             $border-width-base !default; // Added
-$input-border-radius:            $border-radius-base !default;
-$input-border-focus:             #66afe9 !default;
-$input-box-shadow:               inset 0 1px 1px rgba(0,0,0,.075) !default; // Added
+$input-color:                     $gray !default;
+$input-border-width:              $border-width-base !default; // Added
+$input-border-style:              $border-style-base !default; // Added
+$input-border-color:              #ccc !default;
+$input-border-radius:             $border-radius-base !default;
+$input-border-focus:              #66afe9 !default;
+$input-box-shadow:                inset 0 1px 1px rgba(0,0,0,.075) !default; // Added
 
-$input-color-placeholder:        $gray-light !default;
+$input-color-placeholder:         $gray-light !default;
 
-$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
-$input-height-large:             (floor($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-base:               ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-large:              (floor($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-small:              (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
-$legend-color:                   $gray-dark !default;
-$legend-border-color:            #e5e5e5 !default;
+$legend-color:                    $gray-dark !default;
+$legend-border-color:             #e5e5e5 !default;
 
-$input-group-addon-bg:           $gray-lighter !default;
-$input-group-addon-border-color: $input-border !default;
+$input-group-addon-bg:            $gray-lighter !default;
+$input-group-addon-border-width:  $input-border-width !default; // Added
+$input-group-addon-border-style:  $input-border-style !default; // Added
+$input-group-addon-border-color:  $input-border-color !default;
 
 
 // Dropdowns
 // -------------------------
 
 $dropdown-bg:                    #fff !default;
-$dropdown-border:                rgba(0,0,0,.15) !default;
-$dropdown-fallback-border:       #ccc !default;
+$dropdown-border-radius:         $border-radius-base !default;
+$dropdown-border-width:          $border-width-base !default; // Added
+$dropdown-border-style:          $border-style-base !default; // Added
+$dropdown-border-color:          rgba(0,0,0,.15) !default;
+$dropdown-border-color-fallback: #ccc !default;
 $dropdown-divider-bg:            #e5e5e5 !default;
+$dropdown-box-shadow:            0 6px 12px rgba(0,0,0,.175) !default; // Added
+
 
 $dropdown-link-color:            $gray-dark !default;
 $dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
@@ -497,7 +513,9 @@ $progress-bar-info-bg:        $brand-info !default;
 // List group
 // -------------------------
 $list-group-bg:               #fff !default;
-$list-group-border:           #ddd !default;
+$list-group-border-width:     $border-width-base !default;
+$list-group-border-style:     $border-style-base !default;
+$list-group-border-color:     #ddd !default;
 $list-group-border-radius:    $border-radius-base !default;
 
 $list-group-hover-bg:         #f5f5f5 !default;

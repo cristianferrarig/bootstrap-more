@@ -6,6 +6,25 @@
 // Utilities
 // -------------------------
 
+@mixin validate-enabled-border-width($type){
+  @if $enable-border-width != false { @if $type != false {
+    @content;
+  } @else { border: none; }
+  } @else { border: none; }
+}
+
+@mixin validate-enabled-border-radius($type){
+  @if $enable-border-radius != false { @if $type != false {
+    @content;
+  }}
+}
+
+@mixin validate-enabled-box-shadow($type){
+  @if $enable-box-shadow != false { @if $type != false {
+    @content;
+  }}
+}
+
 // Clearfix
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 //
@@ -504,7 +523,9 @@
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   line-height: $line-height;
-  @if $btn-border-radius != false { border-radius: $border-radius; }
+  @include validate-enabled-border-radius($btn-border-radius) {
+    border-radius: $border-radius;
+  }
 }
 
 // Pagination
