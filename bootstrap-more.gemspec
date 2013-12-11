@@ -3,13 +3,13 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bootstrap-more/version'
 
-Gem::Specification.new do |spec|
+Gem::Specification.new do |gem|
   gem.name          = "bootstrap-more"
   gem.version       = Bootstrap::More::VERSION
   gem.authors       = ["Cristian Ferrari"]
   gem.email         = ["cristianferrarig@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Bootstrap More provides the Bootstrap Framework with some special flavors as a rails engine.}
+  gem.summary       = %q{Bootstrap with some special flavors as a rails engine}
   gem.homepage      = ""
   gem.license       = "MIT"
 
