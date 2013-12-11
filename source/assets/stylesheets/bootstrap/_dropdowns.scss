@@ -43,11 +43,10 @@
   font-size: $font-size-base;
   background-color: $dropdown-bg;
 
-  @if $enable-border-width != false { @if $dropdown-border-width != false {
+  @include validate-enabled-border-width($dropdown-border-width) {
     border: $dropdown-border-width $dropdown-border-style $dropdown-border-color-fallback; // IE8 fallback
     border: $dropdown-border-width $dropdown-border-style $dropdown-border-color;
-  } @else { border: none; }
-  } @else { border: none; }
+  }
 
   @if $enable-border-radius != false { @if $dropdown-border-radius != false {
     border-radius: $dropdown-border-radius;
