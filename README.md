@@ -1,29 +1,46 @@
-The flavors are not documented yet :S
+# Bootstrap More
+Bootstrap Sass with some flavors as a rails engine
 
-Sorry about that.
-
-------
-
-To get started, check out <http://cristianferrarig.github.io/bootstrap-more>!
+Bootstrap v. 3.0.3
 
 
+### TODO:
+- Write a gem description
+- Move docs from test/dummy :S (sorry about that)
+- Add the flavors to all components
+- Documented the flavors
 
-### Next steps:
-  1. Add the flavors to all components
-  2. Add the flavors documentation
-  3. Separate documentation
-  4. Build a gem
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'bootstrap-more'
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install bootstrap-more
 
 
-## Getting Started
+## Usage
 
-* Clone and init working directory
+TODO: Write usage instructions here
 
-        $ git clone git@github.com:cristianferrarig/bootstrap-more.git
-        $ cd bootstrap-more
 
-* Install middleman gem:
+## Author
 
-        $ gem install middleman
-        $ bundle install
-        $ bundle exec middleman server
+**Cristian Ferrari**
+[https://github.com/cristianferrarig](https://github.com/cristianferrarig)
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request

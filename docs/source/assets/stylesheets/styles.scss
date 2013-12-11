@@ -56,7 +56,7 @@ body {
 .btn-outline {
   color: #563d7c;
   background-color: #fff;
-  border-color: #e5e5e5;
+  border: 2px solid #e5e5e5;
 }
 .btn-outline:hover,
 .btn-outline:focus,
@@ -70,12 +70,12 @@ body {
 .btn-outline-inverse {
   color: #fff;
   background-color: transparent;
-  border-color: #cdbfe3;
+  border: 2px solid lighten($brand-primary,20%);
 }
 .btn-outline-inverse:hover,
 .btn-outline-inverse:focus,
 .btn-outline-inverse:active {
-  color: #563d7c;
+  color: $brand-primary;
   text-shadow: none;
   background-color: #fff;
   border-color: #fff;
@@ -88,36 +88,36 @@ body {
  * Turn the `.navbar` at the top of the docs purple.
  */
 
-.bs-docs-nav {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
-  background-color: $brand-primary;
-  border-color: darken($brand-primary,10%);
-  box-shadow: 0 1px 0 rgba(255,255,255,.1);
-}
-.bs-docs-nav .navbar-collapse {
-  border-color: darken($brand-primary,10%);
-}
+//.bs-docs-nav {
+//  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+//  background-color: lighten($body-bg,30%);
+//  border-color: lighten($body-bg,10%);
+//  box-shadow: 0 1px 0 rgba(255,255,255,.1);
+//}
+//.bs-docs-nav .navbar-collapse {
+//  border-color: darken($brand-primary,10%);
+//}
 .bs-docs-nav .navbar-brand {
-  color: #fff;
+  color: $brand-primary;
 }
 .bs-docs-nav .navbar-nav > li > a {
-  color: lighten($brand-primary,35%);
+  color: lighten($brand-primary,10%);
 }
 .bs-docs-nav .navbar-nav > li > a:hover {
-  color: #fff;
+  color: $brand-primary;
 }
 .bs-docs-nav .navbar-nav > .active > a,
 .bs-docs-nav .navbar-nav > .active > a:hover {
-  color: #fff;
-  background-color: darken($brand-primary,10%);
+  color: $brand-primary;
+  background-color: lighten($brand-primary,39%);
 }
-.bs-docs-nav .navbar-toggle {
-  border-color: #563d7c;
-}
-.bs-docs-nav .navbar-toggle:hover {
-  background-color: #463265;
-  border-color: #463265;
-}
+//.bs-docs-nav .navbar-toggle {
+//  border-color: #563d7c;
+//}
+//.bs-docs-nav .navbar-toggle:hover {
+//  background-color: #463265;
+//  border-color: #463265;
+//}
 
 
 /*

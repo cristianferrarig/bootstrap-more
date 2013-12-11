@@ -7,13 +7,15 @@
 <title><%= current_page.data.title %></title>
 
 <!-- Bootstrap core CSS -->
-<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "bootstrap" %>
 
 <!-- Documentation extras -->
-<%= stylesheet_link_tag "docs/styles" %>
-<%= stylesheet_link_tag "docs/pygments-manni" %>
+<%= stylesheet_link_tag "styles" %>
+<%= stylesheet_link_tag "pygments-manni" %>
 
-<!--[if lt IE 9]><script src="{{ page.base_url }}docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<!--[if lt IE 9]>
+  <%= javascript_include_tag "vendor/ie8-responsive-file-warning" %>
+<![endif]-->
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -22,8 +24,8 @@
 <![endif]-->
 
 <!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ page.base_url }}docs-assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="{{ page.base_url }}docs-assets/ico/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="assets/ico/favicon.png">
 
 <script>
   var _gaq = _gaq || [];
