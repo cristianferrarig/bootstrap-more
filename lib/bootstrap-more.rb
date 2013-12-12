@@ -1,7 +1,7 @@
-require "bootstrap/more/version"
+require "bootstrap-more/version"
 
 module Bootstrap
   module More
-    require 'bootstrap/more/engine' if defined?(Rails)
+    require 'bootstrap-more/engine' if defined?(Rails)
   end
 end
