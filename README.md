@@ -1,7 +1,7 @@
 # Bootstrap More
 Bootstrap Sass with some flavors as a rails engine
 
-Bootstrap v. 3.0.3
+Bootstrap v. 3.0.2
 
 
 ### TODO:
